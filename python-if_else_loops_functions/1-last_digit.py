@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-print("Last digit of", number, "is", end=" ")
+print(f"Last digit of {number} is {number % 10} ", end="")
 if number > 5:
     print("and is grater that 5")
 elif number == 0:
