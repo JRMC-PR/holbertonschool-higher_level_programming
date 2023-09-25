@@ -10,5 +10,5 @@ if last_digit > 5:
     print("and is greater that 5")
 elif last_digit == 0:
     print("and is 0")
-elif last_digit < 6:
+else:
     print("and is less than 6 and not 0")
