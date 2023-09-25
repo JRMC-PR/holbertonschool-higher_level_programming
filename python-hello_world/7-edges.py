@@ -1,3 +1,4 @@
+#!/bin/bash/python3
 word = "Holberton"  # [startting point : ending point]
 word_first_3 = word[:3]  # positive = start from beginning
 word_last_2 = word[-2:]  # negative = start from end
