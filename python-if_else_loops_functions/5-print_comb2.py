@@ -2,6 +2,6 @@
 for i in range(0, 100):
     if i < 99:
         # {:02d} means print 2 digits with leading 0
-        print("{:02d}, ".format(i), end="")
+        print(f"{i:02d}, ", end="")
     else:
-        print("{:02d}".format(i))
+        print(f"{i:02d}")
