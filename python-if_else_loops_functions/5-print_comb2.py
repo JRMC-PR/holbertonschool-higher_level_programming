@@ -4,4 +4,4 @@ for i in range(0, 100):
         # {:02d} means print 2 digits with leading 0
         print("{:02d}, ".format(i), end="")
     else:
-        print("{:02d}".format(i))
+        print("{:d}".format(i))
