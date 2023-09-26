@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 for i in range(0, 100):
     if i < 99:
-        # {:02d} means print 2 digits with leading 0
         print("{:02d}, ".format(i), end="")
     else:
         print("{:d}".format(i))
