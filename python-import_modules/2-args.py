@@ -11,4 +11,3 @@ else:
 # * print the arguments
 for i in range(1, argc):
     print("{}: {}".format(i, sys.argv[i]))
-rint("{} argument{}:".format(argc - 1, "s" if argc > 2 else ""))
