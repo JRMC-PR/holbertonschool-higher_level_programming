@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-exec('print("#pythoniscool\\n")')  # ? exec function execute python code
+__import__("os").write(1, b"#pythoniscool\n")
