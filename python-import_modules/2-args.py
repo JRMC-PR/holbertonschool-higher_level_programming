@@ -7,7 +7,7 @@ if argc == 1:
     print("0 arguments.")
 else:
     # ? check argc and print print the number of arguments
-    print("{} argument{}:".format(argc - 1, "s" if argc > 2 else ""))
+    print(f"{argc - 1} argument{'s' if argc > 2 else ''}:")
 # * print the arguments
 for i in range(1, argc):
-    print("{}: {}".format(i, sys.argv[i]))
+    print(f"{i}: {sys.argv[i]}")
