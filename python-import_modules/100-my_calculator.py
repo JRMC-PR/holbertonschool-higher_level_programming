@@ -16,11 +16,11 @@ b = int(sys.argv[3])
 if sys.argv[2] == "+":
     print(f"{a} + {b} = {calc.add(a, b)}")
 elif sys.argv[2] == "-":
-    print(f"{a} + {b} = {calc.sub(a, b)}")
+    print(f"{a} - {b} = {calc.sub(a, b)}")
 elif sys.argv[2] == "*":
-    print(f"{a} + {b} = {calc.mul(a, b)}")
+    print(f"{a} * {b} = {calc.mul(a, b)}")
 elif sys.argv[2] == "/":
-    print(f"{a} + {b} = {calc.div(a, b)}")
+    print(f"{a} / {b} = {calc.div(a, b)}")
 else:
     print("Unknown operator. Available operators: +, -, * and /")
     sys.exit(1)
