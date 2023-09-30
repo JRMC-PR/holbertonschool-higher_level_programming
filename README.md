@@ -6,8 +6,6 @@ This repository contains exercises and projects for the Python programming langu
 
 The `python-hello_world` folder contains exercises related to basic Python syntax and programming concepts. These exercises include:
 
-- `0-run`: A script that prints "Hello, World!" to the console.
-- `1-run_inline`: A script that prints "Hello, World!" to the console using an inline command.
 - `2-print.py`: A script that prints a specific string to the console.
 - `3-print_number.py`: A script that prints a specific number to the console.
 - `4-print_float.py`: A script that prints a specific float to the console.
