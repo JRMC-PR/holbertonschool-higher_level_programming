@@ -34,7 +34,6 @@ The `python-if_else_loops_functions` folder contains exercises related to contro
 - `10-add.py`: A function that adds two numbers and returns the result.
 - `11-pow.py`: A function that calculates the power of a given number.
 - `12-fizzbuzz.py`: A function that prints the numbers from 1 to 100, replacing multiples of 3 with "Fizz", multiples of 5 with "Buzz", and multiples of both with "FizzBuzz".
-- `13-insert_number.c`: A C function that inserts a number into a sorted singly linked list.
 
 ## python-import_modules
 
