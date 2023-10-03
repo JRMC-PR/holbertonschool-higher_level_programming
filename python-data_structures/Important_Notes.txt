@@ -195,5 +195,5 @@ to create tuples which contain mutable objects, such as lists.
 As you see, on output tuples are always enclosed in parentheses, so that nested
 tuples are interpreted correctly; they may be input with or without surrounding
 parentheses, although often parentheses are necessary anyway (if the tuple is part
- of a larger expression). It is not possible to assign to the individual items of a
-  tuple, however it is possible to create tuples which contain mutable objects, such as lists.
+of a larger expression). It is not possible to assign to the individual items of a
+tuple, however it is possible to create tuples which contain mutable objects, such as lists.
