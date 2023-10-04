@@ -15,4 +15,17 @@ The `python-if_else_loops_functions` folder contains exercises related to contro
 - `10-add.py`: A function that adds two numbers and returns the result.
 - `11-pow.py`: A function that calculates the power of a given number.
 - `12-fizzbuzz.py`: A function that prints the numbers from 1 to 100, replacing multiples of 3 with "Fizz", multiples of 5 with "Buzz", and multiples of both with "FizzBuzz".
-- `100-print_tebahpla.py`: A script that prints the alphabet in reverse order, alternating between lowercase and uppercase. -`101-remove_char_at.py`: A function that creates a copy of a string, removing the character at a given position.
+- `100-print_tebahpla.py`: A script that prints the alphabet in reverse order, alternating between uppercase and lowercase letters.
+- `101-remove_char_at.py`: A function that removes a character at a given position from a string.
+- `101-main.py`: A script that tests the `101-remove_char_at.py` function.
+- `11-main.py`: A script that tests the `11-pow.py` function.
+- `10-main.py`: A script that tests the `10-add.py` function.
+- `9-main.py`: A script that tests the `9-print_last_digit.py` function.
+- `8-main.py`: A script that tests the `8-uppercase.py` function.
+- `7-main.py`: A script that tests the `7-islower.py` function.
+- `6-print_comb3.py`: A script that tests the `6-print_comb3.py` script.
+- `5-print_comb2.py`: A script that tests the `5-print_comb2.py` script.
+- `4-print_hexa.py`: A script that tests the `4-print_hexa.py` script.
+- `3-print_alphabt.py`: A script that tests the `3-print_alphabt.py` script.
+
+Note that the `__pycache__/` directory contains compiled bytecode files that Python generates to improve the performance of importing modules. You can safely ignore this directory.

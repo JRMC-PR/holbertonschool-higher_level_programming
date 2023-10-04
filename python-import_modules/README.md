@@ -2,7 +2,7 @@
 
 The `python-import_modules` folder contains exercises related to importing and using modules in Python. These exercises include:
 
-- `0-add.py`: A script that imports a function from a module and uses it to add two numbers.
+- `0-add.py`: A script that imports a function from `add-0` and uses it to add two numbers.
 - `1-calculation.py`: A script that imports functions from a module and uses them to perform various calculations.
 - `2-args.py`: A script that prints the arguments passed to it using the `sys` module.
 - `3-infinite_add.py`: A script that adds any number of positive integers passed to it as arguments.
