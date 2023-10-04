@@ -3,6 +3,6 @@ def max_integer(my_list=[]):
     if my_list is None:
         return None
     else:
-        new_list = my_list.copy()
-        new_list.sort()
+        new_list = my_list.copy()  # copy the list
+        new_list.sort()  # sort the list
         return new_list[-1]
