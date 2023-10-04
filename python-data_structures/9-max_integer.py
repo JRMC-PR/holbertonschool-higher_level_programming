@@ -4,5 +4,5 @@ def max_integer(my_list=[]):
         return None
     else:
         new_list = my_list.copy()  # copy the list
-        new_list.sort()  # sort the list
-        return new_list[-1]
+        new_list.sort(reverse=True)  # sort the list
+        return new_list[0]
