@@ -4,8 +4,8 @@ def search_replace(my_list, search, replace):
         return None
     elif search == replace:
         return my_list
-    new_list = my_list.copy()
-    for i in range(len(new_list) - 1):
-        if new_list[i] == search:
-            new_list[i] = replace
-    return new_list
+    # new_list = my_list.copy()
+    # for i in range(len(new_list) - 1):
+        # if new_list[i] == search:
+        # new_list[i] = replace
+    return [replace if x == search else x for x in my_list]
