@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    if my_list == None:
+    if my_list is None:
         return None
-    for i in range(len(my_lyst)):
-        if my_list[i] != my_list[i - 1]:
-            res += my_list[i]
-    return my_list
+    res = 0
+    for i in range(len(my_list)):  # for i in my_list:
+        if my_list[i] not in my_list[:i]:  # if i not in my_list[:i]:
+            res += my_list[i]  # sum value to total
+    return res
