@@ -1,0 +1,371 @@
+The lambda operator or lambda function is a way to create small anonymous
+functions, i.e. functions without a name.These functions are throw-away functions,
+i.e. they are just needed where they have been created. Lambda functions are mainly
+used in combination with the functions filter(), map() and reduce(). The lambda feature
+was added to Python due to the demand from Lisp programmers.
+
+The general syntax of a lambda function is quite simple:
+
+>>> lambda argument_list: expression
+
+
+The argument list consists of a comma separated list of arguments and the expression is an
+ arithmetic expression using these arguments. You can assign the function to a variable to
+ give it a name.
+
+The following example of a lambda function returns the sum of its two arguments:
+
+sum = lambda x, y : x + y
+sum(3,4)
+OUTPUT:
+7
+
+As we have mentioned earlier, the advantage of the lambda operator can be seen when it is used in
+combination with the map() function. map() is a function which takes two arguments:
+
+r = map(func, seq)
+
+The first argument func is the name of a function and the second a sequence (e.g. a list) seq. map()
+applies the function func to all the elements of the sequence seq. Before Python3, map() used to return
+a list, where each element of the result list was the result of the function func applied on the corresponding
+element of the list or tuple "seq". With Python 3, map() returns an iterator.
+
+The following example illustrates the way of working of map():
+
+def fahrenheit(T):
+    return ((float(9)/5)*T + 32)
+def celsius(T):
+    return (float(5)/9)*(T-32)
+temperatures = (36.5, 37, 37.5, 38, 39)
+F = map(fahrenheit, temperatures)
+C = map(celsius, F)
+temperatures_in_Fahrenheit = list(map(fahrenheit, temperatures))
+temperatures_in_Celsius = list(map(celsius, temperatures_in_Fahrenheit))
+print(temperatures_in_Fahrenheit)
+print(temperatures_in_Celsius)
+OUTPUT:
+[97.7, 98.60000000000001, 99.5, 100.4, 102.2]
+[36.5, 37.00000000000001, 37.5, 38.00000000000001, 39.0]
+
+In the example above we haven't used lambda. By using lambda,
+ we wouldn't have had to define and name the functions fahrenheit()
+ and celsius(). You can see this in the following interactive session:
+
+C = [39.2, 36.5, 37.3, 38, 37.8]
+F = list(map(lambda x: (float(9)/5)*x + 32, C))
+print(F)
+OUTPUT:
+[102.56, 97.7, 99.14, 100.4, 100.03999999999999]
+C = list(map(lambda x: (float(5)/9)*(x-32), F))
+print(C)
+OUTPUT:
+[39.2, 36.5, 37.300000000000004, 38.00000000000001, 37.8]
+
+map() can be applied to more than one list. The lists don't have to have the same length. map() will apply its lambda function to the elements of the argument lists, i.e. it first applies to the elements with the 0th index, then to the elements with the 1st index until the n-th index is reached:
+
+a = [1, 2, 3, 4]
+b = [17, 12, 11, 10]
+c = [-1, -4, 5, 9]
+list(map(lambda x, y, z : x+y+z, a, b, c))
+OUTPUT:
+[17, 10, 19, 23]
+list(map(lambda x, y : x+y, a, b))
+OUTPUT:
+[18, 14, 14, 14]
+list(map(lambda x, y, z : 2.5*x + 2*y - z, a, b, c))
+OUTPUT:
+[37.5, 33.0, 24.5, 21.0]
+
+
+4. Lambda Operator, filter, reduce and map
+By Bernd Klein. Last modified: 01 Feb 2022.
+
+On this page
+➤
+
+If Guido van Rossum, the author of the programming language Python, had got his will, this chapter would have been missing in our tutorial. In his article from May 2005 "All Things Pythonic: The fate of reduce() in Python 3000", he gives his reasons for dropping lambda, map(), filter() and reduce(). He expected resistance from the Lisp and the scheme "folks". What he didn't anticipate was the rigidity of this opposition. Enough that Guido van Rossum wrote hardly a year later: "After so many attempts to come up with an alternative for lambda, perhaps we should admit defeat. I've not had the time to follow the most recent rounds, but I propose that we keep lambda, so as to stop wasting everybody's talent and time on an impossible quest." We can see the result: lambda, map() and filter() are still part of core Python. Only reduce() had to go; it moved into the module functools.
+
+His reasoning for dropping them is like this:
+
+There is an equally powerful alternative to lambda, filter, map and reduce, i.e. list comprehension
+List comprehension( is more evident and easier to understand
+Having both list comprehension and "Filter, map, reduce and lambda" is transgressing the Python motto "There should be one obvious way to solve a problem"
+Ring as a symbol of the for loop
+
+Some like it, others hate it and many are afraid of the lambda operator. The lambda operator or lambda function is a way to create small anonymous functions, i.e. functions without a name. These functions are throw-away functions, i.e. they are just needed where they have been created. Lambda functions are mainly used in combination with the functions filter(), map() and reduce(). The lambda feature was added to Python due to the demand from Lisp programmers.
+
+The general syntax of a lambda function is quite simple:
+
+lambda argument_list: expression
+
+The argument list consists of a comma separated list of arguments and the expression is an arithmetic expression using these arguments. You can assign the function to a variable to give it a name.
+
+The following example of a lambda function returns the sum of its two arguments:
+
+sum = lambda x, y : x + y
+sum(3,4)
+OUTPUT:
+7
+The above example might look like a plaything for a mathematician. A formalism which turns an easy to comprehend issue into an abstract harder to grasp formalism. Above all, we could have had the same effect by just using the following conventional function definition:
+
+def sum(x,y):
+    return x + y
+sum(3,4)
+OUTPUT:
+7
+We can assure you that the advantages of this approach will be apparent, when you will have learnt to use the map() function.
+
+The map() Function
+As we have mentioned earlier, the advantage of the lambda operator can be seen when it is used in combination with the map() function. map() is a function which takes two arguments:
+
+r = map(func, seq)
+
+The first argument func is the name of a function and the second a sequence (e.g. a list) seq. map() applies the function func to all the elements of the sequence seq. Before Python3, map() used to return a list, where each element of the result list was the result of the function func applied on the corresponding element of the list or tuple "seq". With Python 3, map() returns an iterator.
+
+The following example illustrates the way of working of map():
+
+def fahrenheit(T):
+    return ((float(9)/5)*T + 32)
+def celsius(T):
+    return (float(5)/9)*(T-32)
+temperatures = (36.5, 37, 37.5, 38, 39)
+F = map(fahrenheit, temperatures)
+C = map(celsius, F)
+temperatures_in_Fahrenheit = list(map(fahrenheit, temperatures))
+temperatures_in_Celsius = list(map(celsius, temperatures_in_Fahrenheit))
+print(temperatures_in_Fahrenheit)
+print(temperatures_in_Celsius)
+OUTPUT:
+[97.7, 98.60000000000001, 99.5, 100.4, 102.2]
+[36.5, 37.00000000000001, 37.5, 38.00000000000001, 39.0]
+In the example above we haven't used lambda. By using lambda, we wouldn't have had to define and name the functions fahrenheit() and celsius(). You can see this in the following interactive session:
+
+C = [39.2, 36.5, 37.3, 38, 37.8]
+F = list(map(lambda x: (float(9)/5)*x + 32, C))
+print(F)
+OUTPUT:
+[102.56, 97.7, 99.14, 100.4, 100.03999999999999]
+C = list(map(lambda x: (float(5)/9)*(x-32), F))
+print(C)
+OUTPUT:
+[39.2, 36.5, 37.300000000000004, 38.00000000000001, 37.8]
+map() can be applied to more than one list. The lists don't have to have the same length. map() will apply its lambda function to the elements of the argument lists, i.e. it first applies to the elements with the 0th index, then to the elements with the 1st index until the n-th index is reached:
+
+a = [1, 2, 3, 4]
+b = [17, 12, 11, 10]
+c = [-1, -4, 5, 9]
+list(map(lambda x, y, z : x+y+z, a, b, c))
+OUTPUT:
+[17, 10, 19, 23]
+list(map(lambda x, y : x+y, a, b))
+OUTPUT:
+[18, 14, 14, 14]
+list(map(lambda x, y, z : 2.5*x + 2*y - z, a, b, c))
+OUTPUT:
+[37.5, 33.0, 24.5, 21.0]
+If one list has fewer elements than the others, map will stop when the shortest list has been consumed:
+
+a = [1, 2, 3]
+b = [17, 12, 11, 10]
+c = [-1, -4, 5, 9]
+list(map(lambda x, y, z : 2.5*x + 2*y - z, a, b, c))
+OUTPUT:
+[37.5, 33.0, 24.5]
+
+Mapping a List of Functions
+The map function of the previous chapter was used to apply one function to one or more iterables. We will now write a function which applies a bunch of functions, which may be an iterable such as a list or a tuple, for example, to one Python object.
+
+from math import sin, cos, tan, pi
+def map_functions(x, functions):
+     """ map an iterable of functions on the the object x """
+     res = []
+     for func in functions:
+         res.append(func(x))
+     return res
+family_of_functions = (sin, cos, tan)
+print(map_functions(pi, family_of_functions))
+OUTPUT:
+[1.2246467991473532e-16, -1.0, -1.2246467991473532e-16]
+The previously defined map_functions function can be simplified with the list comprehension
+ technique, which we will cover in the chapter list comprehension:
+
+def map_functions(x, functions):
+     return [ func(x) for func in functions ]
+
+
+
+
+
+
+
+
+
+>> Sets
+
+A set is an unordered collection with no duplicate elements. Basic uses include membership
+testing and eliminating duplicate entries. Set objects also support mathematical operations
+like union, intersection, difference, and symmetric difference.
+
+Curly braces or the set() function can be used to create sets. Note: to create an empty set
+you have to use set(), not {}; the latter creates an empty dictionary, a data structure that
+we discuss in the next section.
+
+
+Method	Description
+add()	Adds an element to the set
+clear()	Removes all the elements from the set
+copy()	Returns a copy of the set
+difference()	Returns a set containing the difference between two or more sets
+difference_update()	Removes the items in this set that are also included in another, specified set
+discard()	Remove the specified item
+intersection()	Returns a set, that is the intersection of two or more sets
+intersection_update()	Removes the items in this set that are not present in other, specified set(s)
+isdisjoint()	Returns whether two sets have a intersection or not
+issubset()	Returns whether another set contains this set or not
+issuperset()	Returns whether this set contains another set or not
+pop()	Removes an element from the set
+remove()	Removes the specified element
+symmetric_difference()	Returns a set with the symmetric differences of two sets
+symmetric_difference_update()	inserts the symmetric differences from this set and another
+union()	Return a set containing the union of sets
+update()	Update the set with another set, or any other iterable
+
+# Dictionaries
+ dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like append() and extend().
+
+It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.
+
+Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.
+
+tel = {'jack': 4098, 'sape': 4139}
+tel['guido'] = 4127
+tel
+{'jack': 4098, 'sape': 4139, 'guido': 4127}
+tel['jack']
+4098
+del tel['sape']
+tel['irv'] = 4127
+tel
+{'jack': 4098, 'guido': 4127, 'irv': 4127}
+list(tel)
+['jack', 'guido', 'irv']
+sorted(tel)
+['guido', 'irv', 'jack']
+'guido' in tel
+True
+'jack' not in tel
+False
+
+The dict() constructor builds dictionaries directly from sequences of key-value pairs:
+
+>>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
+
+{x: x**2 for x in (2, 4, 6)}
+{2: 4, 4: 16, 6: 36}
+When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:
+
+>>>
+dict(sape=4139, guido=4127, jack=4098)
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+
+When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.
+
+>>>
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+for k, v in knights.items():
+    print(k, v)
+
+gallahad the pure
+robin the brave
+When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function.
+
+>>>
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
+
+0 tic
+1 tac
+2 toe
+To loop over two or more sequences at the same time, the entries can be paired with the zip() function.
+
+>>>
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print('What is your {0}?  It is {1}.'.format(q, a))
+
+What is your name?  It is lancelot.
+What is your quest?  It is the holy grail.
+What is your favorite color?  It is blue.
+To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed() function.
+
+>>>
+for i in reversed(range(1, 10, 2)):
+    print(i)
+
+9
+7
+5
+3
+1When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.
+
+>>>
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+for k, v in knights.items():
+    print(k, v)
+
+gallahad the pure
+robin the brave
+When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function.
+
+>>>
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
+
+0 tic
+1 tac
+2 toe
+To loop over two or more sequences at the same time, the entries can be paired with the zip() function.
+
+>>>
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print('What is your {0}?  It is {1}.'.format(q, a))
+
+What is your name?  It is lancelot.
+What is your quest?  It is the holy grail.
+What is your favorite color?  It is blue.
+To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed() function.
+
+>>>
+for i in reversed(range(1, 10, 2)):
+    print(i)
+
+9
+7
+5
+3
+1
+
+
+Python Dictionary Methods
+Method	Description
+clear()	Removes all the elements from the dictionary
+copy()	Returns a copy of the dictionary
+fromkeys()	Returns a dictionary with the specified keys and value
+get()	Returns the value of the specified key
+items()	Returns a list containing a tuple for each key value pair
+keys()	Returns a list containing the dictionary's keys
+pop()	Removes the element with the specified key
+popitem()	Removes the last inserted key-value pair
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	Updates the dictionary with the specified key-value pairs
+values()	Returns a list of all the values in the dictionary
+
+https://python-course.eu/advanced-python/lambda-filter-reduce-map.php
+
+https://docs.python.org/3/tutorial/datastructures.htmhttps://en.wikipedia.org/wiki/Roman_numeralsl
+https://en.wikipedia.org/wiki/Roman_numerals
