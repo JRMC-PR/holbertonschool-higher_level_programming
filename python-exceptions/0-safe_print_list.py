@@ -2,8 +2,9 @@
 def safe_print_list(my_list=[], x=0):
     try:
         for i in range(0, x):
-            print(f"{my_list[i]}")
+            print(f"{my_list[i]}".format(my_list[i]), end="")
+        print()
         return i + 1
-    except IndexError:
+    except (IndexError, TypeError):
         print()
         return i
