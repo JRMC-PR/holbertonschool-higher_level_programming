@@ -100,3 +100,14 @@ except Exception as inst:
 ('spam', 'eggs')
 x = spam
 y = eggs
+sys.exc_info() is a function in the sys module that returns information about the most recent exception that was raised. It returns a tuple of three values: the exception type, the exception value, and the traceback object.
+
+In the expression sys.exc_info()[1], we are accessing the second element of the tuple returned by sys.exc_info(), which is the exception value. This is equivalent to calling sys.exc_info()[1] to get the exception value directly.
+
+So, in summary, sys.exc_info()[1] is used to get the value of the most recent exception that was raised. This can be useful for handling exceptions and printing error messages.
+
+sys.exc_info() is a function in the sys module that returns information about the most recent exception that was raised. It returns a tuple of three values: the exception type, the exception value, and the traceback object.
+
+In the expression sys.exc_info()[1], we are accessing the second element of the tuple returned by sys.exc_info(), which is the exception value. This is equivalent to calling sys.exc_info()[1] to get the exception value directly.
+
+So, in summary, sys.exc_info()[1] is used to get the value of the most recent exception that was raised. This can be useful for handling exceptions and printing error messages.
