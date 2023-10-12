@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""a Function
-that
-adds 2 integers."""
+"""add_integer - function
+Attribute:
+    a: first integer
+    b: second integer
+return: sum of a and b"""
 
 
 def add_integer(a, b=98):
-    """Return the sum of a and b
-        >>> add_integer(1, 2)
-        3
+    """Returns sum of a and b
         >>> add_integer(100, -2)
         98  """
     if type(a) is not int and type(a) is not float:
