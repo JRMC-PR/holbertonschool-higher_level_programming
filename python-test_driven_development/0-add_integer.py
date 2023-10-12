@@ -4,10 +4,6 @@
 
 def add_integer(a, b=98):
     """Return the sum of a and b
-    Args:
-        a (int): First integer
-        b (int): Second integer
-
         >>> add_integer(1, 2)
         3
         >>> add_integer(100, -2)
