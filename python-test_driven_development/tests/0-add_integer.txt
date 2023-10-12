@@ -11,6 +11,8 @@
 Traceback (most recent call last)
     ...
 TypeError: a must be integer
+>>> add_integr(200, -4)
+196
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
