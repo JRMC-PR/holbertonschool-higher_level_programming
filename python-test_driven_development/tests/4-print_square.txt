@@ -30,4 +30,4 @@ TypeError: size must be an integer
 >>> print_square()
 Traceback (most recetn call last)
     ...
-TypeError: missing 1 required positionl argument: 'size'
+TypeError: print_square() missing 1 required positionl argument: 'size'
