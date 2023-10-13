@@ -3,16 +3,7 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """_summary_
-
-    Args:
-        first_name (_type_): _description_
-        last_name (str, optional): _description_. Defaults to "".
-
-    Raises:
-        TypeError: _description_
-        TypeError: _description_
-
+    """
     >>> say_my_name("John", "Smith")
     My name is John Smith
     >>> say_my_name("Walter", "White")
