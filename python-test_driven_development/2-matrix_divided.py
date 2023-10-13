@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module for matrix_divided method."""
+
+
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix
     Args:
@@ -19,14 +22,15 @@ def matrix_divided(matrix, div):
     >>> matrix_divided([[1.5, 2.8, 3.3], [4.2, 5.5, 6.6]], 2)
     [[0.75, 1.4, 1.65], [2.1, 2.75, 3.3]]
     """
-    if type(matrix) is not list or not all(type(row) is list for row in matrix):
+    if type(matrix) is not list\
+            or not all(type(row) is list for row in matrix):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
     if not all(type(num) in [int, float] for row in matrix for num in row):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
     if len(set(map(len, matrix))) > 1:
-        raise ValueError("matrix contains rows of different sizes")
+        raise ValueError("Each row of the matrix must have the same size")
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
     if div == 0:
