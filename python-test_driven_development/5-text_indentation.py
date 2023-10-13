@@ -29,4 +29,4 @@ def text_indentation(text):
                 if text[i + 1] == ' ':
                     i += 1
         else:
-            print(text[i].strip(), end="")
+            print(text[i].strip())
