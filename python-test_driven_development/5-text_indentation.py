@@ -24,10 +24,10 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     for i in range(len(text)):
         if text[i] == '.' or text[i] == '?' or text[i] == ':':
-            print(text[i].strip())
+            print(text[i])
             print()
             if i != len(text) - 1:
                 if text[i + 1] == ' ':
                     i += 1
         else:
-            print(text[i].strip(), end="")
+            print(text[i], end="")
