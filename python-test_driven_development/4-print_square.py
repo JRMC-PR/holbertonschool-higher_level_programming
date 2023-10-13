@@ -1,4 +1,4 @@
-#!/usr/binptyhon3
+#!/usr/bin/ptyhon3
 def print_square(size):
     """
     Prints a square with the character #.
