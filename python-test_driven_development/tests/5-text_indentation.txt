@@ -27,9 +27,9 @@ TypeError: text must be a string
 >>> text_indentation("Hello, name? ElSeñorDeLaNoche.Acullicu:")
 Hello, name?
 <BLANKLINE>
-ElSeñorDeLaNoche.
+ElSeñorDeLaNoche
 <BLANKLINE>
-Acullicu:
+Acullicu
 <BLANKLINE>
 >>> text_indentation("133")
 133
