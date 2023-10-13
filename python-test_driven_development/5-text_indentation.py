@@ -25,7 +25,7 @@ def text_indentation(text):
     text = text.strip()
     for i in range(len(text)):
         if text[i] == '.' or text[i] == '?' or text[i] == ':':
-            print(text[i])
+            print(text[i].strip())
             print()
             if i != len(text) - 1:
                 if text[i + 1] == ' ':
