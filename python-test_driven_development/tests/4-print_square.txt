@@ -23,3 +23,11 @@
 Traceback (most recent call last):
     ...
 ValueError: size must be >= 0
+>>> print_square("ḧello")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+>>> print_square()
+Traceback (most recetn call last)
+    ...
+TypeError: missing required argument: size
