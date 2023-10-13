@@ -24,12 +24,12 @@ TypeError: text must be a string
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
->>> text_indentation("Hello, name? Lizbeth.Garcia:")
+>>> text_indentation("Hello, name? ElSeñorDeLaNoche.Acullicu:")
 Hello, name?
 <BLANKLINE>
-Lizbeth.
+ElSeñorDeLaNoche.
 <BLANKLINE>
-Garcia:
+Acullicu:
 <BLANKLINE>
 >>> text_indentation("133")
 133
