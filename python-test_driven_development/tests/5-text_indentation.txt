@@ -4,18 +4,20 @@ Traceback (most recent call last):
     ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
 >>> text_indentation("")
+<BLANKLINE>
 
 >>> text_indentation('')
+<BLANKLINE>
 
 >>> text_indentation("?")
-?
 <BLANKLINE>
+
 >>> text_indentation(":")
-:
 <BLANKLINE>
+
 >>> text_indentation(".")
-.
 <BLANKLINE>
+
 >>> text_indentation(None)
 Traceback (most recent call last):
     ...
@@ -24,12 +26,12 @@ TypeError: text must be a string
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
->>> text_indentation("Hello, name? ElSeñorDeLaNoche.Acullicu:")
+>>> text_indentation("Hello, name? ElSeñorDeLaNoche.:")
 Hello, name?
 <BLANKLINE>
-ElSeñorDeLaNoche
+ElSeñorDeLaNoche.
 <BLANKLINE>
-Acullicu
+Acullicu:
 <BLANKLINE>
 >>> text_indentation("133")
 133
