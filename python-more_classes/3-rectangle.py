@@ -89,4 +89,4 @@ class Rectangle:
 
     def __repr__(self):
         """__repr__: returns the representation of the rectangle"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"<3-rectangle.Rectangle object"
