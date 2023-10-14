@@ -11,6 +11,11 @@ class Rectangle:
             width (int): integer width
             height (int): integer height
         """
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+
         self.__width = width
         self.__height = height
 
