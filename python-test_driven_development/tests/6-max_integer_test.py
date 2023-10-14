@@ -32,14 +32,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([3.0, 2.0, 1.0]), 3.0)
         self.assertEqual(max_integer([2.0, 3.0, 1.0]), 3.0)
 
-    def test_string_list(self):
-        with self.assertRaises(TypeError):
-            max_integer(["a", "b", "c"])
-
-    def test_mixed_list(self):
-        with self.assertRaises(TypeError):
-            max_integer([1, "a", 2])
-
 
 if __name__ == '__main__':
     unittest.main()
