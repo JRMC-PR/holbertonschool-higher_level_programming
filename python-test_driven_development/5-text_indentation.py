@@ -30,8 +30,7 @@ def text_indentation(text):
             else:
                 space = True
         if char == '.' or char == '?' or char == ':':
-            print(char)
-            print()
-            space
+            print(char.strip())
+            space = False
         else:
-            print(char, end="")
+            print(char.strip(), end="")
