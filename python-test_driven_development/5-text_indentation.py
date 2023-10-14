@@ -22,13 +22,16 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    text = text.strip()
-    for i in range(len(text)):
-        if text[i] == '.' or text[i] == '?' or text[i] == ':':
-            print(text[i].strip())
+    space = False  # flag to check if there is a space
+    for char in text:
+        if not space:
+            if char == ' ':
+                continue
+            else:
+                space = True
+        if char == '.' or char == '?' or char == ':':
+            print(char)
             print()
-            if i != len(text) - 1:
-                if text[i + 1] == ' ':
-                    i += 1
+            space
         else:
-            print(text[i], end="")
+            print(char, end="")
