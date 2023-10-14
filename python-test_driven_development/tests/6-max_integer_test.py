@@ -32,6 +32,16 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([3.0, 2.0, 1.0]), 3.0)
         self.assertEqual(max_integer([2.0, 3.0, 1.0]), 3.0)
 
+    def test_sorted(self):
+        """Test a sorted list of integers"""
+        ordered = [32, 64, 128, 256]
+        self.assertEqual(max_integer(ordered), 256)
+
+    def test_sorted_rev(self):
+        """Test a sorted (in reverse) list of integers"""
+        ordered = [1024, 512, 256, 128, 64]
+        self.assertEqual(max_integer(ordered), 1024)
+
 
 if __name__ == '__main__':
     unittest.main()
