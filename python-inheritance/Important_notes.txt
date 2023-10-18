@@ -1,0 +1,3 @@
+How to list the available attibuted and methods of an object?
+     we can do that with the buitl in function [dir()]
+        it returns a lsit with all the available atts and methods in an object
