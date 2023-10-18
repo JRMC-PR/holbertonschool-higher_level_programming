@@ -10,3 +10,14 @@
                 '
                 '
                 <statment-n>
+
+isinstance() and issubclass() are both built-in functions in Python that are used to check the type of an object or a class, respectively.
+
+isinstance() is used to check if an object is an instance of a class or any of its subclasses. It takes two arguments: the object you want to
+check and the class or tuple of classes you want to check against. The function returns True if the object is an instance of the specified class
+ or any of its subclasses, and False otherwise.
+
+issubclass() is used to check if a class is a subclass of another class or any of its subclasses. It takes two arguments: the class you want to
+check and the class or tuple of classes you want to check against. The function returns True if the first argument is a subclass of the second argument
+ or any of its subclasses, and False otherwise.the object you want to check and the class or tuple of classes you want to check against. The function returns True if
+the object is an instance of the specified class or any of its subclasses, and False otherwise.
