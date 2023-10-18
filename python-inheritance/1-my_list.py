@@ -10,6 +10,5 @@ class MyList(list):
         prints a sorted list
         Arg:
             self: the list
-
         """
         print(sorted(self))
