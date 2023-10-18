@@ -1,3 +1,12 @@
-How to list the available attibuted and methods of an object?
+# How to list the available attibuted and methods of an object?
      we can do that with the buitl in function [dir()]
         it returns a lsit with all the available atts and methods in an object
+
+# Inheritance
+    To andd inheritance to a class jsut add the name of the (parent class in the parameter) of the class we are making
+            class DerivedClass(BaseClass)
+                <statment-1>
+                '
+                '
+                '
+                <statment-n>
