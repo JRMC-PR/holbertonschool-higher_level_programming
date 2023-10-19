@@ -1,0 +1,52 @@
+### General questions and their anwers ###
+
+
+#What is an object
+---An object is an instance of a class that has attributes and methods. It can be created and manipulated in Python code.
+
+#What is the difference between a class and an object or instance
+---A class is a blueprint for creating objects, while an object or instance is a specific realization of that blueprint.
+    A class defines the attributes and methods that an object will have, while an object is an actual instance of the class
+     with specific values for those attributes.
+
+#What is the difference between immutable object and mutable object
+---An immutable object is an object whose value cannot be changed after it is created, while a mutable object is an object
+    whose value can be changed after it is created.
+
+#What is a reference
+---A reference is a value that points to a specific object in memory. In Python, variables are references to objects.
+
+#What is an assignment
+---An assignment is a statement that assigns a value to a variable or object in Python.
+
+#What is an alias
+---An alias is a second reference to the same object in memory. In Python, multiple variables can refer to the same object,
+    creating aliases.
+
+#How to know if two variables are identical
+---To know if two variables are identical, you can use the is operator in Python. It returns True if the two variables refer
+     to the same object in memory.
+
+#How to know if two variables are linked to the same object
+---To know if two variables are linked to the same object, you can use the == operator in Python. It returns True if the values
+     of the two variables are equal, even if they are not the same object in memory.
+
+#How to display the variable identifier (which is the memory address in the CPython implementation)
+---To display the variable identifier (memory address) in Python, you can use the id() function. It returns a unique identifier
+    for the object that the variable refers to.
+
+#What is mutable and immutable
+---Mutable objects are objects whose value can be changed after they are created, while immutable objects are objects whose value
+    cannot be changed after they are created.
+
+#What are the built-in mutable types
+---The built-in mutable types in Python include lists, dictionaries, and sets.
+
+#What are the built-in immutable types
+---The built-in immutable types in Python include integers, floats, booleans, strings, and tuples.
+
+#How does Python pass variables to functions
+---In Python, variables are passed to functions by reference. This means that the function receives a reference to the object that
+    the variable refers to, rather than a copy of the object itself.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
