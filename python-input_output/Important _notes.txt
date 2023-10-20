@@ -1,0 +1,62 @@
+# General
+
+>>> Why Python programming is awesome
+--- Python programming is awesome because it is a high-level, interpreted language that is easy to learn and use.
+     It has a large and active community, a vast library of modules and packages, and is used in a wide range of
+     applications, from web development to scientific computing.
+
+>>> How to open a file
+--- To open a file in Python, you can use the built-in open() function. It takes two arguments: the name of the file
+    you want to open, and the mode in which you want to open it (read, write, append, etc.).
+
+>>> How to write text in a file
+--- To write text to a file in Python, you can use the write() method of a file object. It takes a string as an argument
+    and writes it to the file.
+
+>>> How to read the full content of a file
+--- To read the full content of a file in Python, you can use the read() method of a file object. It reads the entire
+    contents of the file and returns it as a string.
+
+>>> How to read a file line by line
+--- To read a file line by line in Python, you can use a for loop to iterate over the lines of the file. You can also
+    use the readline() method of a file object to read one line at a time.
+
+>>> How to move the cursor in a file
+--- To move the cursor in a file in Python, you can use the seek() method of a file object. It takes an offset and a
+    reference point as arguments and moves the cursor to the specified position in the file.
+
+>>> How to make sure a file is closed after using it
+--- To make sure a file is closed after using it in Python, you can use the close() method of a file object. It closes
+    the file and releases any system resources associated with it.
+
+>>> What is and how to use the with statement
+--- The with statement in Python is used to ensure that a block of code is executed with a context, and that the context
+     is properly cleaned up after the block is executed. It is commonly used with file objects to ensure that the file is
+     closed after it is used.
+
+>>> What is JSON
+--- JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write,
+    and easy for machines to parse and generate. It is commonly used for data serialization and communication between web
+    servers and clients.
+
+>>> What is serialization
+--- Serialization is the process of converting a data structure or object into a format that can be stored or transmitted.
+    In Python, the json module provides functions for serializing and deserializing JSON data.
+
+>>> What is deserialization
+--- Deserialization is the process of converting a serialized data structure or object back into its original form. In Python,
+     the json module provides functions for deserializing JSON data.
+
+>>> How to convert a Python data structure to a JSON string
+--- To convert a Python data structure to a JSON string in Python, you can use the json.dumps() function. It takes a Python object
+    as an argument and returns a JSON-formatted string.
+
+>>> How to convert a JSON string to a Python data structure
+--- To convert a JSON string to a Python data structure in Python, you can use the json.loads() function. It takes a JSON-formatted
+    string as an argument and returns a Python object.
+
+>>> How to access command line parameters in a Python script
+--- To access command line parameters in a Python script, you can use the sys.argv list. It contains the command line arguments passed
+    to the script, with the first argument being the name of the script itself.
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
