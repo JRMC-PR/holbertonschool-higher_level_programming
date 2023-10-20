@@ -13,5 +13,6 @@ with open('add_item.json', 'a+') as f:
         save_to_json_file(lst, 'add_item.json')
     else:
         lst = []
-        lst.extend(sys.argv[1:])
+        for i in sys.argv[1:]:
+            lst.append(i)
         save_to_json_file(lst, 'add_item.json')
