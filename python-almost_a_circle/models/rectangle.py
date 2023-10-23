@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ Rectangle class """
-from models.base import Base as B
+from models.base import Base
 
 
-class Rectangle(B):
+class Rectangle(Base):
     __width = 0
     __heigth = 0
     __x = 0
