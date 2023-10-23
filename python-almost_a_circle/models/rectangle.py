@@ -8,7 +8,7 @@ class Rectangle(Base):
     __heigth = 0
     __x = 0
     __y = 0
-     hef fhof pfiw
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ init method for rectangle class
         Args:
