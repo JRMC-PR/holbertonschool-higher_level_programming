@@ -53,9 +53,10 @@ class Rectangle(Base):
         """
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be > 0")
-        self.__width = value
+        else:
+            self.__width = value
 
     @height.setter
     def height(self, value):
@@ -65,9 +66,10 @@ class Rectangle(Base):
         """
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        if value <= 0:
+        elif value <= 0:
             raise ValueError("heoight must be > 0")
-        self.__height = value
+        else:
+            self.__height = value
 
     @x.setter
     def x(self, value):
@@ -77,9 +79,10 @@ class Rectangle(Base):
         """
         if type(value) is not int:
             raise TypeError("x must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value
+        else:
+            self.__x = value
 
     @y.setter
     def y(self, value):
@@ -89,9 +92,10 @@ class Rectangle(Base):
         """
         if type(value) is not int:
             raise TypeError("y must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value
+        else:
+            self.__y = value
 
     # Methods
     def area(self):
