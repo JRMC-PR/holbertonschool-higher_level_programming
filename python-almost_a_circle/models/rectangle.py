@@ -123,5 +123,4 @@ class Rectangle(Base):
             self.id, self.width, self.height, self.x, self.y = args
         else:
             for key, value in kwargs.items():
-                if getattr(self, key):
-                    setattr(self, key, value)
+                setattr(self, key, value)
