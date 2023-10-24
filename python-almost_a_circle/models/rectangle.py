@@ -40,7 +40,8 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
-    """artgument getters"""
+    # Argument getters
+
     @property
     def width(self):
         """ width getter """
@@ -120,10 +121,17 @@ class Rectangle(Base):
     def display(self):
         """display the Rectangle using '#' """
         for i in range(self.height):
+            if i != self.x:
+                print()
+                continue
             for j in range(self.width):
+                if j != self.y:
+                    print(" ", end="")
+                    continue
                 print("#", end="")
             print()
 
     def __str__(self):
         """return the string representation of the Rectangle """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id})\
+        {self.x}/{self.y} - {self.width}/{self.height}"
