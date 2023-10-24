@@ -120,17 +120,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """Update the rectangle"""
         if args:
-            for i, arg in enumerate(args):
-                if i == 0:
-                    self.id = args[i]
-                if i == 1:
-                    self.width = args[i]
-                if i == 2:
-                    self.height = args[i]
-                if i == 3:
-                    self.x = args[i]
-                if i == 4:
-                    self.y = args[i]
+            self.id, self.width, self.height, self.x, self.y = args
         else:
             for key, value in kwargs.items():
                 if getattr(self, key):
