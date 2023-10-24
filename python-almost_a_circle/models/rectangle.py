@@ -20,9 +20,25 @@ class Rectangle(Base):
             id (int): id of the rectangle
         """
         super().__init__(id)
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be > 0")
         self.__width = width
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("heoight must be > 0")
         self.__height = height
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
         self.__x = x
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
         self.__y = y
     """artgument getters"""
     @property
@@ -51,6 +67,10 @@ class Rectangle(Base):
         Args:
             value (int): value to set
         """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @height.setter
@@ -59,6 +79,10 @@ class Rectangle(Base):
         Args:
             value (int): value to set
         """
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("heoight must be > 0")
         self.__height = value
 
     @x.setter
@@ -67,6 +91,10 @@ class Rectangle(Base):
         Args:
             value (int): value to set
         """
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @y.setter
@@ -75,4 +103,23 @@ class Rectangle(Base):
         Args:
             value (int): value to set
         """
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
+
+    # Methods
+    def area(self):
+        """Calculate the area of a rectangle
+        Returns:
+            The area of the Rectangle
+        """
+        return self.width * self.height
+
+    def display(self):
+        """display the Rectangle using '#' """
+        for i in range(self.height):
+            for j in range(self.width):
+                print("#", end="")
+            print()
