@@ -6,7 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """ Rectangle class inherits from Base class """
     __width = 0
-    __heigth = 0
+    __height = 0
     __x = 0
     __y = 0
 
