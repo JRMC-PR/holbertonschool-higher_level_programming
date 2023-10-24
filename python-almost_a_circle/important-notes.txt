@@ -1,0 +1,62 @@
+getattr() takes two arguments: an object and a string representing the name
+of the attribute you want to get. It returns the value of the attribute if it
+exists, or raises an AttributeError if the attribute does not exist.
+
+Here's an example of how to use getattr():
+
+
+class MyClass:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+my_obj = MyClass(10, 20)
+
+x_value = getattr(my_obj, 'x')
+print(x_value)  # Output: 10
+
+y_value = getattr(my_obj, 'y')
+print(y_value)  # Output: 20
+
+z_value = getattr(my_obj, 'z', None)
+print(z_value)  # Output: None
+
+n this example, the getattr() function is used to get the values of the x and y attributes
+of a MyClass object my_obj. The getattr() function is also used to try to get the value of a
+ non-existent z attribute, which returns None because of the default value provided as the second argument.
+
+
+
+
+setattr() takes three arguments: an object, a string representing the name of the attribute you want to set, and the value you want to set the attribute to. It sets the value of the attribute if it exists, or creates a new attribute with the given name and value if it does not exist.
+
+Here's an example of how to use setattr():
+class MyClass:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+my_obj = MyClass(10, 20)
+
+setattr(my_obj, 'x', 30)
+print(my_obj.x)  # Output: 30
+
+setattr(my_obj, 'z', 40)
+print(my_obj.z)  # Output: 40
+
+In this example, the setattr() function is used to set the value of the x attribute of a MyClass object my_obj to 30. The setattr() function is also used to create a new z attribute with a value of 40.
+
+I hope this helps! Let me know if you have any other questions or if there's anything else I can help you with.
+
+class MyClass:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+my_obj = MyClass(10, 20)
+
+setattr(my_obj, 'x', 30)
+print(my_obj.x)  # Output: 30
+
+setattr(my_obj, 'z', 40)
+print(my_obj.z)  # Output: 40
