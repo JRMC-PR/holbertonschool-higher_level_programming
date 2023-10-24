@@ -5,6 +5,10 @@ from models.base import Base
 
 class Rectangle(Base):
     """ Rectangle class inherits from Base class """
+    __width = 0
+    __height = 0
+    __x = 0
+    __y = 0
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ init method for rectangle class
@@ -20,7 +24,9 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+
     """artgument getters"""
+
     @property
     def width(self):
         """ width getter """
@@ -40,7 +46,9 @@ class Rectangle(Base):
     def y(self):
         """ y getter """
         return self.__y
+
     """Argument setters """
+
     @width.setter
     def width(self, value):
         """ width setter
