@@ -5,10 +5,6 @@ from models.base import Base
 
 class Rectangle(Base):
     """ Rectangle class inherits from Base class """
-    __width = 0
-    __height = 0
-    __x = 0
-    __y = 0
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ init method for rectangle class
