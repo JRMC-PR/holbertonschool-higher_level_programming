@@ -132,3 +132,18 @@ class Rectangle(Base):
         """return the string representation of the Rectangle """
         return (f"[Rectangle] ({self.id}) "
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
+
+    def update(self, *args):
+        """Update the rectangle"""
+        if args:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = args[i]
+                if i == 1:
+                    self.width = args[i]
+                if i == 2:
+                    self.height = args[i]
+                if i == 3:
+                    self.x = args[i]
+                if i == 4:
+                    self.y = args[i]
