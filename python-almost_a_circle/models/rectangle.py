@@ -120,13 +120,7 @@ class Rectangle(Base):
     def display(self):
         """display the Rectangle using '#' """
         for i in range(self.height):
-            if i != self.x:
-                print()
-                continue
             for j in range(self.width):
-                if j != self.y:
-                    print(" ", end="")
-                    continue
                 print("#", end="")
             print()
 
