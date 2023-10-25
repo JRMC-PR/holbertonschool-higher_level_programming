@@ -44,3 +44,10 @@ class Base:
         if list_dictionaries is None or list_dictionaries is []:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        import json
+        if json_string is None or json_string is []:
+            return "[]"
+        return json.loads(json_string)
