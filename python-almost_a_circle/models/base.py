@@ -17,6 +17,24 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    """class methods"""
+
+    @classmethod
+    def load_from_file(cls):
+        """ class method to return list of instances """
+        import json
+        filename = cls.__name__ + ".json"
+        list_dict = []
+        try:
+            with open(filename, 'r') as f:
+                list_dict = cls.from_json_string(f.read())
+        except FileNotFoundError:
+            pass
+        list_inst = []
+        for dict in list_dict:
+            list_inst.append(cls.create(**dict))
+        return list_inst
+
     @classmethod
     def create(cls, **dictionary):
         """ class method to return instance with attributes already set
