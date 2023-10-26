@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Base class """
+from os import path
+import json
 
 
 class Base:
@@ -54,7 +56,6 @@ class Base:
         Args:
             list_objs (list): list of objects
         """
-        import json
         filename = cls.__name__ + ".json"
         list_dict = []
         if list_objs is not None:
@@ -71,14 +72,12 @@ class Base:
         Args:
             list_dictionaries (list): list of dictionaries
         """
-        import json
         if list_dictionaries is None or list_dictionaries is []:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
-        import json
         if json_string is None or json_string is []:
             return "[]"
         return json.loads(json_string)
