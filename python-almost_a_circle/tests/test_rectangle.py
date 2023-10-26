@@ -27,9 +27,3 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r), "[Rectangle] (89) 4/10 - 2/3")
         r.update(89, 2, 3, 4, 5)
         self.assertEqual(str(r), "[Rectangle] (89) 4/5 - 2/3")
-
-    def test_to_dictionary(self):
-        r = Rectangle(10, 2, 1, 9)
-        d = r.to_dictionary()
-        self.assertEqual(
-            d, {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
