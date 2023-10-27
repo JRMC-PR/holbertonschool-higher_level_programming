@@ -2,6 +2,7 @@
 """ Base class """
 from os import path
 import json
+import turtle
 
 
 class Base:
@@ -81,3 +82,37 @@ class Base:
         if json_string is None or json_string is []:
             return []
         return json.loads(json_string)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ static method to draw all Rectangles and Squares """
+        # Create a turtle object
+        t = turtle.Turtle()
+
+        # Set the turtle speed and pen size
+        t.speed(0)
+        t.pensize(2)
+        # Draw all the Rectangles
+        for rect in list_rectangles:
+            t.penup()
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            t.color("pink")
+            for i in range(2):
+                t.forward(rect.width)
+                t.left(90)
+                t.forward(rect.height)
+                t.left(90)
+
+        # Draw all the Squares
+        for square in list_squares:
+            t.penup()
+            t.goto(square.x, square.y)
+            t.pendown()
+            t.color("violet")
+            for i in range(4):
+                t.forward(square.size)
+                t.left(90)
+
+        # Exit the turtle graphics window
+        turtle.done()
