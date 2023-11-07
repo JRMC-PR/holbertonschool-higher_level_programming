@@ -94,4 +94,4 @@ Note that the `__pycache__/` directory contains compiled bytecode files that Pyt
 
 ## Author
 
-This repository was created by Jesús R. Méndez Cruz (https://github.com/JRMC-PR). If you have any questions or comments about the repository, please feel free to contact me.
+This repository was created by Jesús R. Méndez Cruz (https://github.com/JRMC-PR). If you have any questions or comments about the repository, please feel free to contact me. Thank you for visiting!
