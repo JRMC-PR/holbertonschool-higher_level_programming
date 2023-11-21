@@ -1,2 +1,3 @@
 to delet tables use [DROP DATABASE "Db_name";]
 to delet rows and columa use [DELET]
+to see all tabes in a Db  use SHOW TABLES IN ' DB_name'
