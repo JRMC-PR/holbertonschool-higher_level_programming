@@ -1,3 +1,16 @@
 to delet tables use [DROP DATABASE "Db_name";]
 to delet rows and columa use [DELET]
 to see all tabes in a Db  use SHOW TABLES IN ' DB_name'
+The select formath
+
+The SELECT clause allows us to specify a comma-separated list of attribute names corresponding to the columns that are to be retrieved. You can use an asterisk character, *, to retrieve all the columns.
+In queries where all the data is found in one table, the FROM clause is where we specify the name of the table from which to retrieve rows. In other articles we will use it to retrieve rows from multiple tables.
+The WHERE clause is used to constrain which rows to retrieve. We do this by specifying a boolean predicate that compares the values of table columns to literal values or to other columns.
+The ORDER BY clause gives us a way to order the display of the rows in the result of the statement.
+
+SELECT {attribute}+
+  FROM {table}+
+  [ WHERE {boolean predicate to pick rows} ]
+  [ ORDER BY {attribute}+ ];
+
+  The SHOW CREATE TABLE command in MySQL is used to show the SQL statement that creates a given table. This can be useful if you want to see the exact structure of a table, including all columns, types, indexes, and constraints.
