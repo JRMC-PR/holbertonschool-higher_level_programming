@@ -14,3 +14,5 @@ SELECT {attribute}+
   [ ORDER BY {attribute}+ ];
 
   The SHOW CREATE TABLE [ to show the description ] command in MySQL is used to show the SQL statement that creates a given table. This can be useful if you want to see the exact structure of a table, including all columns, types, indexes, and constraints.
+
+  If you want to count the number of records where id equals 89, you should use the COUNT() function. Here's how you can do it:
