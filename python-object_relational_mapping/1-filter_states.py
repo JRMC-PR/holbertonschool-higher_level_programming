@@ -22,7 +22,8 @@ if __name__ == "__main__":
 
     """ Print all rows"""
     for row in rows:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
 
     """ Close cursor and db """
     cur.close()
