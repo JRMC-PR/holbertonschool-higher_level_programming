@@ -16,8 +16,8 @@ if __name__ == "__main__":
     """ Establish a connection to the MySQL database
     sys.argv[1], sys.argv[2], and sys.argv[3] are command
     line arguments for MySQL username, password, and database name"""
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         password=sys.argv[2], db=sys.argv[3])
 
 # Create a cursor object to execute SQL queries
     cur = db.cursor()
