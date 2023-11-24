@@ -1,18 +1,21 @@
 #!/usr/bin/python3
 """
 This script lists all states from the database hbtn_0e_0_usa.
-It takes three command line arguments: MySQL username, password, and database name.
+It takes three command line arguments: MySQL username,
+password, and database name.
 """
 
 # Import necessary modules
 import MySQLdb
 import sys
-"""This condition checks if the script is being run directly or imported as a module
-#The code inside this condition will only run if the script is run directly"""
+"""This condition checks if the script is being run
+directly or imported as a module
+The code inside this condition will only run if the
+script is run directly"""
 if __name__ == "__main__":
     """ Establish a connection to the MySQL database
-     sys.argv[1], sys.argv[2], and sys.argv[3] are command
-       line arguments for MySQL username, password, and database name"""
+    sys.argv[1], sys.argv[2], and sys.argv[3] are command
+    line arguments for MySQL username, password, and database name"""
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
 
