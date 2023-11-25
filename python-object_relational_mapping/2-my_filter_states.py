@@ -17,12 +17,12 @@ if __name__ == "__main__":
     """get the state name """
     state_name = sys.argv[4]
 
-    """Execute a sql query
-    to pass the argument safely into the query,
-    use the second argument of execute()
-    like a tuple with the value you want to pass"""
-    cur.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".fortmat(state_name))
+    """acreate the query"""
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".fortmat(
+        state_name)
+
+    """Execute the query"""
+    cur.execute(query)
 
     """Fetch all rows"""
     for row in cur.fetchall():
