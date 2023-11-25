@@ -22,7 +22,7 @@ if __name__ == "__main__":
     use the second argument of execute()
     like a tuple with the value you want to pass"""
     cur.execute(
-        "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC", (state_name,))
+        "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".fortmat(state_name))
 
     """Fetch all rows"""
     for row in cur.fetchall():
