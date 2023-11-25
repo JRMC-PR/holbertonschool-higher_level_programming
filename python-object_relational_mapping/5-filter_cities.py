@@ -8,24 +8,25 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    """Connect to the database"""
+    # Function that lists all states from database hbtn_0e_0_usa
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                         password=sys.argv[2], db=sys.argv[3])
+                         passwd=sys.argv[2], db=sys.argv[3])
 
-    """Create a cursor object"""
+    # Creating cursor object
     cur = db.cursor()
 
-    # Create query
-    query = "SELECT cities.name FROM citites WHERE state.name = %s\
-            ORDER BY cities.id ASC"
+# Executing MySql Query
+    cur.execute("SELECT name FROM cities WHERE state_id = \
+                (SELECT id FROM states WHERE name = '{}')\
+                ORDER BY id".format(sys.argv[4]))
 
-    """Execute the query"""
-    cur.execute(query, (sys.argv[4],))
+    # Obtaining Query Result & prints the result in rows
+    rows = cur.fetchall()
+    tabl = []
+    for row in rows:
+        tabl.append(row[0])
+    print(', '.join(tabl))
 
-    """Fetch all rows"""
-    for row in cur.fetchall():
-        print(row)
-
-    """Close cursor and db"""
+    # Clean Up
     cur.close()
     db.close()
