@@ -16,7 +16,8 @@ if __name__ == "__main__":
 
     """acreate the query and get the state
     name from the command line"""
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".format(
+    query = "SELECT * FROM states WHERE name LIKE BINARY \
+        '{}' ORDER BY states.id ASC".format(
         sys.argv[4])
 
     """Execute the query"""
