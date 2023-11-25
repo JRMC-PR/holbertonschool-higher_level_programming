@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" a script that takes in an argument
-and displays all values in the states table of
-hbtn_0e_0_usa where name matches the argument."""
+""" write a script that takes in arguments and displays all values
+in the states table of hbtn_0e_0_usa where name matches the argument.
+But this time, write one that is safe from MySQL injections!"""
 
 import MySQLdb
 import sys
@@ -18,11 +18,10 @@ if __name__ == "__main__":
     name from the command line
     Like BINARY is used to make the search case sensitive"""
     query = "SELECT * FROM states WHERE name LIKE BINARY \
-        '{}' ORDER BY states.id ASC".format(
-        sys.argv[4])
+        %s ORDER BY states.id ASC"
 
     """Execute the query"""
-    cur.execute(query)
+    cur.execute(query, (sys.argv[4],))
 
     """Fetch all rows"""
     for row in cur.fetchall():
