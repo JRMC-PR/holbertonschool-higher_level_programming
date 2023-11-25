@@ -14,12 +14,10 @@ if __name__ == "__main__":
     """Create a cursor object"""
     cur = db.cursor()
 
-    """get the state name """
-    state_name = sys.argv[4]
-
-    """acreate the query"""
+    """acreate the query and get the state
+    name from the command line"""
     query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".fortmat(
-        state_name)
+        sys.argv[4])
 
     """Execute the query"""
     cur.execute(query)
